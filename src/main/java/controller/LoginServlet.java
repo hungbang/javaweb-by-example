@@ -13,10 +13,18 @@ import java.io.IOException;
 @WebServlet(name = "LoginServlet", urlPatterns = "/login")
 public class LoginServlet extends HttpServlet{
 
+    //to show login form
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("this is login");
         req.getRequestDispatcher("/WEB-INF/jsp/login.jsp")
                 .forward(req, resp);
+    }
+
+
+    //to be call when login action is fired.
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        super.doPost(req, resp);
     }
 }

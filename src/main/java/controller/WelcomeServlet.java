@@ -16,6 +16,14 @@ public class WelcomeServlet extends HttpServlet{
 
     UserService userService = new UserService();
 
+
+    /**
+     * if user not found, redirect user's web browser to login page, otherwise go to the welcome
+     * @param req
+     * @param resp
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("====this is WelcomeServlet");
